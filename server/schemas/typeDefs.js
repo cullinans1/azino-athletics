@@ -35,7 +35,7 @@ const typeDefs = gql`
 
   type Auth {
     token: ID
-    user: user
+    user: User
   }
 
   type Query {
@@ -62,7 +62,7 @@ const typeDefs = gql`
       password: String
     ): User
     updateProduct(_id: ID!): Product
-    login(email: String!, passowrd: String!): Auth
+    login(email: String!, password: String!): Auth
   }
 `;
 
