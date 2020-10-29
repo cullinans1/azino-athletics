@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#logo {
+  margin-right: 1vw;
+}
+#login-signup-page {
+  background-color: rgb(219, 221, 223);
+}
+#login-signup-form {
+  padding-top: 10vw;
+  margin-bottom: 10vw;
+  width: 25rem;
+}
+.card-body {
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.6);
+}
+.form-group {
+  margin-top: 1rem;
+}

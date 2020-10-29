@@ -1,12 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { ApolloProvider } from '@apollo/react-hooks';
-import ApolloClient from 'apollo-boost';
-import "./App.css"
+import { ApolloProvider } from "@apollo/react-hooks";
+import ApolloClient from "apollo-boost";
+import "./App.css";
 
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
-import Signup from './pages/Signup'
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -25,11 +26,12 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-            <Nav />
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/signup" component={Signup} />
-            </Switch>
+          <Nav />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/login" component={Login} />
+          </Switch>
         </div>
       </Router>
     </ApolloProvider>
