@@ -1,3 +1,8 @@
+:root {
+  --gray: rgb(53, 59, 65);
+  --secondary: rgb(111, 173, 192);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,12 +11,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+#login-btn {
+  margin-right: 1rem;
+}
 #logo {
   margin-right: 1vw;
 }
@@ -22,10 +28,57 @@ code {
   padding-top: 10vw;
   margin-bottom: 10vw;
   width: 25rem;
+  text-align: center;
+}
+#small-card {
+  margin-top: 1rem;
+}
+
+#login-btn a, #logout-btn a, #signup-btn a {
+  color: whitesmoke;
+  text-emphasis: none;
 }
 .card-body {
   box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.6);
 }
 .form-group {
   margin-top: 1rem;
+}
+/* .jumbotron img {
+  padding: 2px;
+  max-height: 100vw;
+  max-width: 10vw;
+} */
+.jumbotron {
+  background-image: url('./components/Jumbotron/shirts.jpg');
+  position: absolute;
+  left: 0;
+  height: 80%;
+  width: 100%;
+  background-color: #000;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: none;
+  background-position: center center;
+  color: whitesmoke;
+}
+
+.jumbotron h1, p {
+  background-color: rgba(53, 59, 65, 0.801);
+  padding-left: 1rem;
+  width: 20rem;
+}
+.jumbotron p {
+  width: 65%;
+}
+
+#shirt-btn, #pant-btn {
+  margin-top: 10rem;
+  margin-left: 2rem;
+  background-color: rgba(53, 59, 65, 0.801);
+}
+#shirt-btn:hover, #pant-btn:hover, .btn:hover {
+  color: whitesmoke;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
 }

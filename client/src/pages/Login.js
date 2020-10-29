@@ -105,7 +105,7 @@ function Login(props) {
               </button>
             </div>
           </form>
-          <div className="card card-body">
+          <div className="card card-body" id="small-card">
             Dont have an account?
             <Link to="/signup">Sign Up!</Link>
           </div>
