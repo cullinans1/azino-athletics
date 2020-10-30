@@ -94,7 +94,7 @@ db.once("open", async () => {
       category: categories[4]._id,
       description:
         "Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.",
-      image: "plastic-horses.jpg",
+      image: "sunglasses.jpg",
       price: 2.99,
     },
   ]);

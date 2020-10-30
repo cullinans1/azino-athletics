@@ -1,12 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
-import Jumbotron from '../components/Jumbotron';
+import Jumbotron from "../components/Jumbotron";
+import CategorySection from "../components/Categories";
+import AllProducts from "../components/AllProducts";
 
 const Home = () => {
   if (Auth.loggedIn()) {
     return (
+      <div>
         <Jumbotron />
+        <CategorySection />
+        <AllProducts />
+      </div>
     );
   } else {
     return (
