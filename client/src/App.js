@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import AllProducts from "./components/AllProducts";
 import ViewAll from './components/ViewAll'
 import SingleProduct from "./pages/SingleProduct";
+import SingleCategory from "./pages/SingleCategory";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -40,6 +41,7 @@ function App() {
               <Route exact path ='/viewcategory' component={AllProducts} />
               <Route exact path ='/viewall' component={ViewAll} />
               <Route exact path ='/products/:id' component={SingleProduct} />
+              <Route exact path ='/category/:id' component={SingleCategory} />
             </Switch>
           </Provider>
         </div>

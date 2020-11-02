@@ -4,14 +4,16 @@ import Auth from "../utils/auth";
 import Jumbotron from "../components/Jumbotron";
 import CategorySection from "../components/Categories";
 import AllProducts from "../components/AllProducts";
+import CategoryList from "./Categories";
 
 const Home = () => {
   if (Auth.loggedIn()) {
     return (
       <div>
         <Jumbotron />
-        <CategorySection />
-        <AllProducts />
+        {/* <CategorySection /> */}
+        <CategoryList />
+        {/* <AllProducts /> */}
       </div>
     );
   } else {
