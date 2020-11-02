@@ -1,6 +1,11 @@
 :root {
   --gray: rgb(53, 59, 65);
   --secondary: rgb(111, 173, 192);
+  --primary: #8c54ff;
+  --gray2: #31343D;
+  --alpha: rgba(160, 160, 160, 0.7);
+  --beta: rgba(75, 75, 75, 0.788);
+
 }
 
 body {
@@ -82,7 +87,9 @@ code {
   background-color: var(--secondary);
   border-color: var(--secondary);
 }
-
+.btn:hover {
+  background-color: var(--secondary);
+}
 #category-container {
   background-color: whitesmoke;
   max-width: 100%;
@@ -93,16 +100,55 @@ code {
   max-height: auto;
 }
 .product-item img {
-  max-width: 25rem;
-  max-height: 25rem;
+  max-width: 300px;
+  max-height: 500px;
   height: auto;
   width: auto;
 }
+.category {
+  margin-bottom: 5vw;
+}
 .category-box {
-  max-width: 25rem;
-  max-height: 25rem;
+  max-width: 100%;
+  max-height: 100%;
   height: auto;
   width: auto;
+}
+
+.category-text {
+  color: var(--secondary);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 50px;
+  z-index: 900;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category-text:hover {
+  background-color: var(--alpha);
+  opacity: 1;
+  border: 10px solid var(--gray2);
+}
+
+.categorybtn {
+  padding: 100px;
+  background-color: var(--beta);
+  color: whitesmoke;
+}
+.view-all {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.view-all a {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 .product-card {

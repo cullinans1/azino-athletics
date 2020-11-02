@@ -6,12 +6,13 @@ import { useQuery } from "@apollo/react-hooks";
 import { QUERY_PRODUCTS } from "../utils/queries";
 import spinner from "../assets/spinner.gif";
 
-function SingleCategory() {
+function SingleCategory(props) {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const { loading, data } = useQuery(QUERY_PRODUCTS);
-  const  currentCategory  = '5f9b8878920f9c13440475eb';
-  console.log(currentCategory)
+  const currentCategory = props.match.params.id;
+  //used this to figure out how to get page to display according to the current category ID.
+  console.log(props.match.params.id)
  
   
   useEffect(() => {

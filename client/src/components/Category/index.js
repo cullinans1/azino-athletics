@@ -6,15 +6,17 @@ function Category({ categories }) {
   const { name, _id } = categories;
 
   return (
-    <div className="category" key={_id}>
+    <div className="col-6 category" key={_id}>
       <img
         src={require(`../../assets/${name}category.jpg`)}
         alt={name}
         className="category-box"
       />
+      <div className="category-text">
       <Link to={`/category/${_id}`}>
-        <button className="btn btn-lg btn-outline-danger">{name}</button>
+        <button className="btn btn-lg btn-outline-dark categorybtn">{name}</button>
       </Link>
+      </div>
     </div>
   );
 }

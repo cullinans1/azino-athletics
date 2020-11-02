@@ -29,11 +29,13 @@ function CategoryList() {
 
   return (
     <div>
-      <div className="flex-row">
+      <div className="row">
         {categories.map((categories, _id) => (
           <Category categories={categories} key={"category" + _id} />
         ))}
-        <button className="btn-lg btn btn-dark">
+      </div>
+      <div className="row">
+      <button className="btn-lg btn btn-dark view-all">
           <Link to="/viewall"> View All Products </Link>
         </button>
       </div>
