@@ -31,7 +31,7 @@ function ViewAll() {
     <div className="container">
       <h2> All Of Our Products </h2>
       {state.products.length ? (
-        <div className="flex-row">
+        <div className="flex-row product-card">
           {returnProducts().map((product) => (
             <ProductItem
               key={product._id}

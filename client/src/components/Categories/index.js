@@ -29,24 +29,24 @@ function CategorySection() {
     }
   }, [categoryData, loading, dispatch]);
 
-  const handleClick = (id) => {
-    dispatch({
-      type: UPDATE_CURRENT_CATEGORY,
-      currentCategory: id,
-    });
-  };
+  // const handleClick = (id) => {
+  //   dispatch({
+  //     type: UPDATE_CURRENT_CATEGORY,
+  //     currentCategory: id,
+  //   });
+  // };
   return (
     <div className="container" id="category-container">
       {categories.map(item => (
-        <button
-        className="btn btn-dark btn-lg"
+        <a
+        className="col-6"
           key={item._id}
           onClick={() => {
             handleClick(item._id);
           }}
         >
           {item.name}
-        </button>
+        </a>
       ))}
       <button className='btn-lg btn btn-dark'>
           <Link to='/viewall'> View All Products </Link>
