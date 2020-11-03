@@ -45,7 +45,7 @@ function SingleProduct() {
               alt={currentProduct.name}
             />
           </div>
-          <div className="col-lg-4 col-sm-12 product-style">
+          <div className="col-lg-4 col-sm-12 product-style align-self-center">
             <h2>{currentProduct.name}</h2>
 
             <p>{currentProduct.description}</p>
