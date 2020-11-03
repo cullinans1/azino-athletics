@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <div className="About row">
+    <div className="About row" id="about">
       <h1>About Us</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -52,7 +52,7 @@ function About() {
         convallis. Nam nec elementum magna.
       </p>
       <div className="row azino-logo-text">
-        <img src={"/images/azino-clear.png"} />
+        <img src={"/images/azino-clear.png"} alt="azino logo"/>
       </div>
     </div>
   );

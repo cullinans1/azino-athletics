@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SingleCategory from "../../pages/SingleCategory";
+// import SingleCategory from "../../pages/SingleCategory";
 
 function Category({ categories }) {
   const { name, _id } = categories;
 
   return (
-    <div className="col-6 category" key={_id}>
+    <div className="col-lg-6 col-sm-12 category" key={_id}>
       <img
         src={require(`../../assets/${name}category.jpg`)}
         alt={name}

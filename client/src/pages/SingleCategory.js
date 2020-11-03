@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import ProductItem from "../components/ProductItem";
 import { useDispatch, useSelector } from "react-redux";
 import { UPDATE_PRODUCTS } from "../utils/actions";
@@ -12,7 +12,7 @@ function SingleCategory(props) {
   const { loading, data } = useQuery(QUERY_PRODUCTS);
   const currentCategory = props.match.params.id;
   //used this to figure out how to get page to display according to the current category ID.
-  console.log(props.match.params.id)
+  // console.log(props)
  
   
   useEffect(() => {
@@ -40,10 +40,10 @@ function SingleCategory(props) {
   }
 
   return (
-    <div className="my-2">
-      <h2>Our Products:</h2>
+    <div className="container-fluid">
+      <h2 id="product-header">Products</h2>
       {state.products.length ? (
-        <div className="flex-row">
+        <div className="row product-card">
           {filterProducts().map(product => (
               <ProductItem
                 key= {product._id}

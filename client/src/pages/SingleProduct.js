@@ -32,20 +32,28 @@ function SingleProduct() {
   return (
     <>
       {currentProduct ? (
-        <div className="card card-body product-item">
-          <Link to="/viewall">← Back to Products</Link>
+        <div className="single-product-item">
+          <Link to="/viewall">
+            <button className="btn btn-lg btn-outline-secondary product-btn">
+              ← Back to Products
+            </button>
+          </Link>
 
-          <h2>{currentProduct.name}</h2>
+          <div className="col-lg-4 col-sm-12 product-style">
+            <img
+              src={`/images/${currentProduct.image}`}
+              alt={currentProduct.name}
+            />
+          </div>
+          <div className="col-lg-4 col-sm-12 product-style">
+            <h2>{currentProduct.name}</h2>
 
-          <p>{currentProduct.description}</p>
+            <p>{currentProduct.description}</p>
 
-          <p>
-            <strong>Price: </strong>${currentProduct.price}{" "}
-          </p>
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
+            <p>
+              <strong>Price: </strong>${currentProduct.price}{" "}
+            </p>
+          </div>
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}

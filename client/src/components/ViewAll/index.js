@@ -10,7 +10,7 @@ function ViewAll() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
 
-  const { category } = state;
+  // const { category } = state;
 
   const { loading, data } = useQuery(QUERY_ALL_PRODUCTS);
 
@@ -28,10 +28,10 @@ function ViewAll() {
   }
 
   return (
-    <div className="container">
-      <h2> All Of Our Products </h2>
+    <div className="container-fluid">
+      <h2 id="product-header"> All Of Our Products </h2>
       {state.products.length ? (
-        <div className="flex-row product-card">
+        <div className="row product-card">
           {returnProducts().map((product) => (
             <ProductItem
               key={product._id}

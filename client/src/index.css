@@ -1,7 +1,9 @@
 :root {
   --gray: rgb(53, 59, 65);
+  --gray-op: rgb(59, 66, 73);
   --darkgray: rgb(32, 35, 39);
   --secondary: rgb(111, 173, 192);
+  --secondary-op: rgba(158, 215, 233, 0.836);
   --primary: #8c54ff;
   --gray2: #31343d;
   --alpha: rgba(160, 160, 160, 0.7);
@@ -19,6 +21,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+#azino-nav:hover {
+  color: whitesmoke;
+  transition: all 0.3s ease-in-out;
 }
 #login-btn {
   margin-right: 1rem;
@@ -56,6 +62,9 @@ code {
   max-height: 100vw;
   max-width: 10vw;
 } */
+.navbar {
+  border-bottom: 1px solid;
+}
 .jumbotron {
   background-image: url("./assets/shirts.jpg");
   position: relative;
@@ -78,6 +87,10 @@ code {
 }
 .jumbotron p {
   width: 65%;
+}
+
+.flex-row {
+  display: flex;
 }
 
 #shirt-btn,
@@ -116,15 +129,61 @@ code {
   max-width: 50vw;
   max-height: 50vw;
 }
-.product-item {
-  max-width: auto;
-  max-height: auto;
+#product-header {
+  text-align: center;
+  color: whitesmoke;
 }
-.product-item img {
+.product-item,
+.single-product-item {
+  margin: 3vw;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  text-emphasis: none;
+}
+.product-item p {
+  font-size: large;
+  color: var(--darkgray);
+}
+.product-item:hover {
+  background-color: var(--secondary-op);
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 25px;
+  z-index: 900;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+.product-item:hover p {
+  font-size: x-large;
+  font-weight: bolder;
+  color: var(--gray2);
+  transition: all 0.5s ease-in-out;
+}
+.product-item img,
+.single-product-item img {
   max-width: 300px;
   max-height: 500px;
   height: auto;
   width: auto;
+  border-radius: 8px;
+  margin-bottom: 1vw;
+}
+.single-product-item {
+  margin: 0;
+  background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+}
+.single-product-item a {
+  color: var(--darkgray);
+}
+.product-style {
+  margin-top: 5vw;
+}
+.product-btn {
+  margin: 2vw;
 }
 .category {
   margin-bottom: 5vw;
@@ -133,7 +192,7 @@ code {
   text-align: center;
   color: whitesmoke;
   margin-bottom: 25px;
-  padding-top: 4vw;
+  padding-top: 4rem;
   border-top: solid 10px var(--darkgray);
 }
 .category-title h2 {
@@ -171,6 +230,8 @@ code {
   padding: 10vw;
   background-color: var(--beta);
   color: whitesmoke;
+  font-size: xx-large;
+  transition: all 0.4s ease-in-out;
 }
 .view-all {
   width: 100%;
@@ -184,4 +245,25 @@ code {
 
 .product-card {
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .category-text {
+    background-color: rgba(160, 160, 160, 0.329);
+    opacity: 1;
+    /* border: 10px solid var(--gray2); */
+  }
+  .categorybtn {
+    padding: 5vw;
+    background-color: rgba(160, 160, 160, 0);
+    border-color: rgba(160, 160, 160, 0);
+    opacity: 1;
+    color: whitesmoke;
+    font-size: x-large;
+    font-weight: bold;
+  }
+  #product-header {
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+  }
 }

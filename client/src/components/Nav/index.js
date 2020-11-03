@@ -15,6 +15,7 @@ function Nav() {
             loading="lazy"
             id="logo"
           />
+          <span id="azino-nav">A Z I N O </span>
         </a>
         <div>
           <button className="btn btn-outline-secondary" id="logout-btn">
@@ -37,8 +38,9 @@ function Nav() {
             loading="lazy"
             id="logo"
           />
-          A Z I N O
+          <span id="azino-nav">A Z I N O </span>
         </a>
+        
         <div className="login-signup-btns">
           <button className="btn btn-outline-secondary" id="login-btn">
             <Link to="/login">Login</Link>

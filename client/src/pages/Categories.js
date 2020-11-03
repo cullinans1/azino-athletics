@@ -33,11 +33,17 @@ function CategoryList() {
         {categories.map((categories, _id) => (
           <Category categories={categories} key={"category" + _id} />
         ))}
-      </div>
-      <div className="row">
-      <button className="btn-lg btn btn-dark view-all">
-          <Link to="/viewall"> View All Products </Link>
-        </button>
+        <div className="col-lg-6 col-sm-12 category">
+          <img src={require('../assets/ViewAll.jpg')} alt="Clothes" className="category-box"/>
+          <div className="category-text">
+            <Link to="/viewall"> 
+            <button className="btn btn-lg btn-outline-dark categorybtn"> View All Products </button>
+            </Link>
+          </div>
+          {/* <button className="btn-lg btn btn-dark view-all">
+            <Link to="/viewall"> View All Products </Link>
+          </button> */}
+        </div>
       </div>
     </div>
   );
