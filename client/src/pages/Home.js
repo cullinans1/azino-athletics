@@ -9,10 +9,15 @@ import About from "../components/About";
 const Home = () => {
   if (Auth.loggedIn()) {
     return (
-      <div className="container-fluid">
+      <div>
         <Jumbotron />
-        <About />
-        <CategoryList />
+        <div className="container-fluid">
+          <About />
+          <div className="container-fluid category-title">
+            <h2>View By Category</h2>
+            <CategoryList />
+          </div>
+        </div>
         {/* <AllProducts /> */}
       </div>
     );

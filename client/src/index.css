@@ -1,23 +1,23 @@
 :root {
   --gray: rgb(53, 59, 65);
+  --darkgray: rgb(32, 35, 39);
   --secondary: rgb(111, 173, 192);
   --primary: #8c54ff;
-  --gray2: #31343D;
+  --gray2: #31343d;
   --alpha: rgba(160, 160, 160, 0.7);
   --beta: rgba(75, 75, 75, 0.788);
-
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 #login-btn {
@@ -39,7 +39,9 @@ code {
   margin-top: 1rem;
 }
 
-#login-btn a, #logout-btn a, #signup-btn a {
+#login-btn a,
+#logout-btn a,
+#signup-btn a {
   color: whitesmoke;
   text-emphasis: none;
 }
@@ -55,7 +57,7 @@ code {
   max-width: 10vw;
 } */
 .jumbotron {
-  background-image: url('./assets/shirts.jpg');
+  background-image: url("./assets/shirts.jpg");
   position: relative;
   left: 0;
   height: 40rem;
@@ -68,7 +70,8 @@ code {
   color: whitesmoke;
 }
 
-.jumbotron h1, .jumbotron p {
+.jumbotron h1,
+.jumbotron p {
   background-color: rgba(53, 59, 65, 0.84);
   padding-left: 1rem;
   width: 20rem;
@@ -77,12 +80,15 @@ code {
   width: 65%;
 }
 
-#shirt-btn, #pant-btn {
+#shirt-btn,
+#pant-btn {
   margin-top: 10rem;
   margin-left: 2rem;
   background-color: rgba(53, 59, 65, 0.801);
 }
-#shirt-btn:hover, #pant-btn:hover, .btn:hover {
+#shirt-btn:hover,
+#pant-btn:hover,
+.btn:hover {
   color: whitesmoke;
   background-color: var(--secondary);
   border-color: var(--secondary);
@@ -94,7 +100,22 @@ code {
   background-color: whitesmoke;
   max-width: 100%;
 }
-
+.About {
+  padding: 3vw;
+  border-top: solid;
+  margin: 5vw;
+  margin-bottom: 1vw;
+  color: black;
+}
+.azino-logo-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.azino-logo-text img {
+  max-width: 50vw;
+  max-height: 50vw;
+}
 .product-item {
   max-width: auto;
   max-height: auto;
@@ -107,6 +128,16 @@ code {
 }
 .category {
   margin-bottom: 5vw;
+}
+.category-title {
+  text-align: center;
+  color: whitesmoke;
+  margin-bottom: 25px;
+  padding-top: 4vw;
+  border-top: solid 10px var(--darkgray);
+}
+.category-title h2 {
+  margin-bottom: 4rem;
 }
 .category-box {
   max-width: 100%;
@@ -125,7 +156,7 @@ code {
   padding: 50px;
   z-index: 900;
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,7 +168,7 @@ code {
 }
 
 .categorybtn {
-  padding: 100px;
+  padding: 10vw;
   background-color: var(--beta);
   color: whitesmoke;
 }
