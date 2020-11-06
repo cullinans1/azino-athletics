@@ -20,6 +20,10 @@ const productSchema = new Schema({
     required: true,
     min: 0.99,
   },
+  sizes: {
+    type: [String],
+    required: true,
+  },
   category: {
     type: Schema.Types.ObjectId,
     ref: "Category",

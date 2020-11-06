@@ -12,7 +12,7 @@
 
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -188,6 +188,10 @@ code {
 }
 .single-product-item a {
   color: var(--darkgray);
+}
+
+.cart-btns{
+  margin-bottom: 1rem;
 }
 .product-style {
   margin-top: 5vw;

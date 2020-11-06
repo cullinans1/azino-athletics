@@ -5,6 +5,7 @@ import Jumbotron from "../components/Jumbotron";
 // import AllProducts from "../components/AllProducts";
 import CategoryList from "./Categories";
 import About from "../components/About";
+import Cart from "../components/Cart";
 
 const Home = () => {
   // if (Auth.loggedIn()) {
@@ -18,6 +19,7 @@ const Home = () => {
           <CategoryList />
         </div>
       </div>
+      <Cart />
       {/* <AllProducts /> */}
     </div>
   );

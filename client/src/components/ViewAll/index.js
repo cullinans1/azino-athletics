@@ -13,6 +13,7 @@ function ViewAll() {
   // const { category } = state;
 
   const { loading, data } = useQuery(QUERY_ALL_PRODUCTS);
+  // console.log(data)
 
   useEffect(() => {
     if (data) {
@@ -39,6 +40,7 @@ function ViewAll() {
               image={product.image}
               name={product.name}
               price={product.price}
+              sizes={product.sizes}
             />
           ))}
         </div>
