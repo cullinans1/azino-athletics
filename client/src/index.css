@@ -66,6 +66,7 @@ code {
 } */
 .navbar {
   border-bottom: 1px solid;
+  background-color: #606c74!important;
 }
 .jumbotron {
   background-image: url("./assets/shirts.jpg");
@@ -120,7 +121,7 @@ code {
   border-top: solid;
   margin: 5vw;
   margin-bottom: 1vw;
-  color: black;
+  /* color: black; */
   transition: all 0.5s ease-in-out;
 }
 .About:hover {
